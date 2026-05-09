@@ -2,7 +2,7 @@
 name: Generic Issue
 description: Generic Issue
 title: ''
-labels:
+labels: [ meta::needs triage ]
 
 body:
   - type: dropdown
