@@ -19,6 +19,7 @@ updates:
       default-days: 7
     schedule:
       interval: weekly
+    assignees: [ georglauterbach ]
     labels:
       - kind::update
       - area::code
