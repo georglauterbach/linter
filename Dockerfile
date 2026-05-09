@@ -23,10 +23,9 @@ ENV ZIZMOR_VERSION=1.23.1
 
 WORKDIR /tmp
 
+# hadolint ignore=DL3008
 RUN apt-get -qq update \
-    && apt-get -qq -o=Dpkg::Use-Pty=0 install --no-install-recommends \
-        ca-certificates=20250419build1 \
-        wget=1.25.0-2ubuntu4 \
+    && apt-get -qq -o=Dpkg::Use-Pty=0 install --no-install-recommends ca-certificates wget \
     \
     && wget --quiet -O actionlint.tar.gz \
         "https://github.com/rhysd/actionlint/releases/download/v${ACTIONLINT_VERSION}/actionlint_${ACTIONLINT_VERSION}_linux_amd64.tar.gz" \
