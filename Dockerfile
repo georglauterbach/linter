@@ -19,7 +19,7 @@ ENV EDITORCONFIG_CHECKER_VERSION=3.6.1
 ENV HADOLINT_VERSION=2.14.0
 ENV SHELLCHECK_VERSION=0.11.0
 ENV YAMLLINT_VERSION=1.37.1-1
-ENV ZIZMOR_VERSION=1.23.1
+ENV ZIZMOR_VERSION=1.24.1
 
 WORKDIR /tmp
 
@@ -51,7 +51,7 @@ RUN apt-get -qq update \
     \
     && wget --quiet -O zizmor.tar.gz \
         "https://github.com/zizmorcore/zizmor/releases/download/v${ZIZMOR_VERSION}/zizmor-x86_64-unknown-linux-gnu.tar.gz" \
-    && tar xf zizmor.tar.gz ./zizmor \
+    && tar xf zizmor.tar.gz zizmor \
     && mv zizmor /usr/local/bin/zizmor \
     \
     && chmod +x /usr/local/bin/* \

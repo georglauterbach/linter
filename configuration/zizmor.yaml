@@ -2,5 +2,3 @@
 rules:
   unpinned-uses:
     disable: true
-  secrets-outside-env:
-    disable: true
