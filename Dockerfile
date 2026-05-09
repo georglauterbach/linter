@@ -7,7 +7,7 @@ ARG VSC_REVISION=unknown
 
 # https://snyk.io/de/blog/how-and-when-to-use-docker-labels-oci-container-annotations/
 LABEL org.opencontainers.image.title="linter"
-LABEL org.opencontainers.image.description="A linter image composed of common linters"
+LABEL org.opencontainers.image.description="A container image composed of common linters"
 LABEL org.opencontainers.image.source="https://github.com/georglauterbach/linter"
 LABEL org.opencontainers.image.revision="${VSC_REVISION}"
 LABEL org.opencontainers.image.base.digest="cc925e589b7543b910fea57a240468940003fbfc0515245a495dd0ad8fe7cef1"
