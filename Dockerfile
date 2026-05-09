@@ -55,9 +55,7 @@ RUN apt-get -qq update \
     && mv zizmor /usr/local/bin/zizmor \
     \
     && chmod +x /usr/local/bin/* \
-    && apt-get -qq remove wget \
-    && apt-get -qq autoremove \
-    && apt-get -qq clean \
+    && apt-get -qq autoremove --purge wget \
     && rm -rf ./* /var/lib/apt/lists
 
 COPY libbash       /etc/linters/libbash
