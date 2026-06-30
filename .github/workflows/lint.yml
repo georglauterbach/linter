@@ -33,6 +33,7 @@ jobs:
       - name: Build Image
         uses: docker/build-push-action@v7
         with:
+          file: Containerfile
           context: .
           load: true
           tags: linter

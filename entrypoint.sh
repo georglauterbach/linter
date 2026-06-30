@@ -54,7 +54,7 @@ if ${ENABLE_HADOLINT:-}; then
     then
       HADOLINT_SUCCESS=false
     fi
-  done < <(find . -name Dockerfile)
+  done < <(find . \( -name Dockerfile -or -name Containerfile \) )
 
   if "${HADOLINT_SUCCESS}"; then
     libbash::log::log info 'Linting with hadolint succeeded'
