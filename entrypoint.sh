@@ -99,7 +99,7 @@ fi
 
 if ${ENABLE_YAMLLINT:-}; then
   libbash::log::log info "Running yamllint ${YAMLLINT_VERSION%-*}"
-  if yamllint "${SHELLCHECK_CUSTOM_ARGUMENTS[@]}" \
+  if yamllint "${YAMLLINT_CUSTOM_ARGUMENTS[@]}" \
     --config-file "${YAMLLINT_CONFIG:-${CONFIGURATION_DIR}/yamllint.yaml}" \
     .
   then
