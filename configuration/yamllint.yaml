@@ -1,9 +1,12 @@
 ---
+extends: default
+
 yaml-files:
   - '*.yaml'
   - '*.yml'
 
-extends: default
+ignore:
+  - pnpm-lock.yaml
 
 rules:
   braces:
