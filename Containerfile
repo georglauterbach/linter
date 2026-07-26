@@ -1,4 +1,4 @@
-FROM docker.io/ubuntu@sha256:53958ec7b67c2c9355df922dd08dbf0360611f8c3cdb656875e81873db9ffdba
+FROM docker.io/ubuntu@sha256:3131b4cc82a783df6c9df078f86e01819a13594b865c2cad47bd1bca2b7063bb
 
 ARG VCS_VERSION=edge
 ARG VSC_REVISION=unknown
