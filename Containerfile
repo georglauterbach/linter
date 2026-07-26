@@ -8,7 +8,7 @@ LABEL org.opencontainers.image.title="linter"
 LABEL org.opencontainers.image.description="A container image composed of common linters"
 LABEL org.opencontainers.image.source="https://github.com/georglauterbach/linter"
 LABEL org.opencontainers.image.revision="${VSC_REVISION}"
-LABEL org.opencontainers.image.base.digest="53958ec7b67c2c9355df922dd08dbf0360611f8c3cdb656875e81873db9ffdba"
+LABEL org.opencontainers.image.base.digest="3131b4cc82a783df6c9df078f86e01819a13594b865c2cad47bd1bca2b7063bb"
 LABEL org.opencontainers.image.base.name="docker.io/alpine"
 LABEL org.opencontainers.image.version="${VCS_VERSION}"
 
