@@ -6,8 +6,7 @@ All notable changes to this project will be documented in this file. The format 
 
 > [!NOTE]
 >
-> Changes and additions listed here are contained in the `:edge` image tag.
-> These changes may not be as stable as released changes.
+> Changes and additions listed here have not been released yet.
 
 ## [v0.4.3](https://github.com/georglauterbach/linter/releases/tag/v0.4.3)
 
