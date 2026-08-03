@@ -1,6 +1,6 @@
 # linter - Agent Guide
 
-This project defines a container image & GitHub Action that you can use to run multiple linters.
+A container image & GitHub Action that you can use to run multiple linters.
 
 The container image is defined in [`Dockerfile`](./Dockerfile). It aims at being small and it does not contain programming-language-specific linters except for ShellCheck.
 
