@@ -12,11 +12,14 @@ The container image is defined in [`Dockerfile`](./Dockerfile). It aims at being
 
 ## Repository Layout
 
-| Path             | Purpose                                                |
-| :--------------- | :----------------------------------------------------- |
-| `.github/`       | GitHub-related content like CI/CD, issues, etc.        |
-| `configuration/` | default configurations for all linters in this project |
+|Path|Purpose|
+|:-|:-|
+|`README.md`|Project description|
+|`cspell.config.yaml`|Spell-check configuration|
+|`CHANGELOG.md`|Keep a Changelog history|
+|`.github/`|GitHub-related content like CI/CD, issues, etc.|
 
 ## Linters
 
 Read through this repository's [`README.md`](./README.md) to find a description of all linters this project employs.
+
