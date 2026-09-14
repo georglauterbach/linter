@@ -1,4 +1,4 @@
-FROM docker.io/ubuntu@sha256:2260313b31c8c011cd2eebe728008efac1b3982be73eb71348ea2648d2c0e09b
+FROM docker.io/ubuntu@sha256:513c074113a871b51a8d16ab445c88779d6452d937a164fb5cc479f32668a41d
 
 ARG VCS_VERSION=edge
 ARG VSC_REVISION=unknown
@@ -8,7 +8,7 @@ LABEL org.opencontainers.image.title="linter"
 LABEL org.opencontainers.image.description="A container image composed of common linters"
 LABEL org.opencontainers.image.source="https://github.com/georglauterbach/linter"
 LABEL org.opencontainers.image.revision="${VSC_REVISION}"
-LABEL org.opencontainers.image.base.digest="2260313b31c8c011cd2eebe728008efac1b3982be73eb71348ea2648d2c0e09b"
+LABEL org.opencontainers.image.base.digest="513c074113a871b51a8d16ab445c88779d6452d937a164fb5cc479f32668a41d"
 LABEL org.opencontainers.image.base.name="docker.io/alpine"
 LABEL org.opencontainers.image.version="${VCS_VERSION}"
 
