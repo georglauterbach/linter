@@ -9,8 +9,7 @@ updates:
     schedule:
       interval: monthly
     assignees: [ georglauterbach ]
-    labels:
-      - area::ci
+    labels: [ area::ci ]
 
   - package-ecosystem: docker
     directory: /
@@ -19,5 +18,4 @@ updates:
     schedule:
       interval: weekly
     assignees: [ georglauterbach ]
-    labels:
-      - area::code
+    labels: [ area::code ]
