@@ -2,11 +2,29 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/georglauterbach/linter/compare/v0.4.5...HEAD)
+## [Unreleased](https://github.com/georglauterbach/linter/compare/v0.5.0...HEAD)
 
 > [!NOTE]
 >
 > Changes and additions listed here have not been released yet.
+
+## [v0.5.0](https://github.com/georglauterbach/linter/releases/tag/v0.5.0)
+
+- **Updated**
+  - Ubuntu base image: 26.04 -> 26.10
+  - `editorconfig-checker`: 3.8.0 -> 4.0.2
+  - `hadolint`: 2.14.0 -> 2.15.1
+  - `yamllint`: 1.37.1-1 -> 1.38.0-1
+  - `zizmor`: 1.26.1 -> 1.33.1
+  - Copier project template: 0.4.0 -> 0.4.3
+- **Changed**
+  - `wget` is now directly piped into `tar` to get rid of intermediate commands
+- **Fixed**
+  - `LABEL org.opencontainers.image.base.name` is now correctly set to `docker.io/ubuntu`
+- **Added**
+  - the linter version and commit are now displayed on startup on log level `DEBUG` or higher
+  - Hadolint now ignores [`DL4006`](https://github.com/hadolint/hadolint/wiki/DL4006) because `SHELL` is not part of the OCI specification
+  - in case neither `GITHUB_TOKEN`, `GH_TOKEN` nor `ZIZMOR_GITHUB_TOKEN` is set, `ZIZMOR_OFFLINE` is explicitly set to `true` to avoid a warning about the default offline mode
 
 ## [v0.4.5](https://github.com/georglauterbach/linter/releases/tag/v0.4.5)
 

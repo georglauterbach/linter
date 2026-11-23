@@ -31,7 +31,7 @@ readonly SHELLCHECK_CUSTOM_ARGUMENTS           SHELLCHECK_VERSION
 readonly YAMLLINT_CUSTOM_ARGUMENTS             YAMLLINT_VERSION
 readonly ZIZMOR_CUSTOM_ARGUMENTS               ZIZMOR_VERSION
 
-libbash::log::log debug 'Starting linter'
+libbash::log::log debug "Running linter version ${VCS_VERSION:?} (${VSC_REVISION:?})"
 
 if ${ENABLE_ACTIONLINT:-}; then
   libbash::log::log info "Running actionlint ${ACTIONLINT_VERSION}"
@@ -47,7 +47,7 @@ fi
 
 if ${ENABLE_EDITORCONFIG_CHECKER:-}; then
   libbash::log::log info "Running editorconfig-checker ${EDITORCONFIG_CHECKER_VERSION}"
-  if ec "${EDITORCONFIG_CHECKER_CUSTOM_ARGUMENTS[@]}" \
+  if editorconfig-checker "${EDITORCONFIG_CHECKER_CUSTOM_ARGUMENTS[@]}" \
     -config "${EDITORCONFIG_CHECKER_CONFIG:-${CONFIGURATION_DIR}/editorconfig_checker.json}"
   then
     libbash::log::log info 'Linting with editorconfig-checker succeeded'
@@ -112,6 +112,11 @@ fi
 
 if ${ENABLE_ZIZMOR:-}; then
   libbash::log::log info "Running zizmor ${ZIZMOR_VERSION}"
+
+  if ! [[ -v GITHUB_TOKEN || -v GH_TOKEN || -v ZIZMOR_GITHUB_TOKEN ]]; then
+    export ZIZMOR_OFFLINE=true
+  fi
+
   if zizmor "${ZIZMOR_CUSTOM_ARGUMENTS[@]}" \
     --config "${ZIZMOR_CONFIG:-${CONFIGURATION_DIR}/zizmor.yaml}" \
     .
